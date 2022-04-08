@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav>
-        Enter the Contest for the Vacation of a Lifetime
+        Enter the Contest for the Vacation of a Lifetime!
     </nav>
     <main>
         <h2>Vacation Contest Sign-Up Form</h2>
@@ -17,21 +17,33 @@
         > <!-- TODO: Set Action and Method Properties -->
             <div>
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <span class="required-field">*</span>
+                <input type="text" id="firstname" name="firstname" required="firstname" minlength="2" maxlength="35">
+                
 
                 <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <span class="required-field">*</span>
+                <input type="text" id="lastname" name="lastname" required="lastname" minlength="2" maxlength="35">
+                
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age" min="21" max="120">
+                <h5>*Must be age 21 or older to enter the contest</h5>
+
+
                 <!-- TODO: Create a "lastname" input with type "text" -->
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <label for="email">Your Email</label>
-                <input type="text" id="email" name="email">
+                <span class="required-field">*</span>
+
+                <input type="text" id="email" name="email" required="email">
                 <label for="streetAddress">Your Street Address</label>
                 <input type="text" id="streetAddress" name="streetAddress">
                 <label for="city">City</label>
                 <input type="text" id="city" name="city">
                 <label for="state">State</label>
+
                 <select name="state">
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -149,7 +161,14 @@
             <!-- TODO: Radio buttons for selecting preferred destination -->
             <!-- TODO: Color input for selecting favorite color -->
             <!-- TODO: Checkboxes for selecting extra add-ons -->
-            
+
+            <!--COMPLETED!!!-->
+
+                <div>
+                    <input type="submit" id="enter" name="enter" value="Enter The Contest">
+                    <label for="enter"></label>
+
+                </div>
             <!-- TODO: Submit Button -->
         </form>
     </main>
